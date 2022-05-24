@@ -1,2 +1,2 @@
-# css
- learning css
+# scss animation
+ make animation with scss
