@@ -73,7 +73,14 @@ picture {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-width: 100vw;
   font-family: system-ui;
+  transform: scale(0.7);
+}
+@media screen and (max-width: 768px) {
+  .container {
+    transform: scale(0.5);
+  }
 }
 
 .orbit {
