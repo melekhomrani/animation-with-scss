@@ -15,6 +15,7 @@
     aspect-ratio: 1/1;
     border-radius: 2rem;
     overflow: hidden;
+    z-index: 3;
     img {
       position: absolute;
       top: 0;
@@ -33,6 +34,10 @@
   position: relative;
   width: 13rem;
   aspect-ratio: 1/1;
+  animation: rot-ate 40s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
   .anim-circle {
     --icon-bg : #fff;
     --text-bg : #000;
@@ -65,6 +70,7 @@
       background-color: var(--text-bg);
     }
     &:hover {
+      animation-play-state: paused;
       > p {
         opacity: 1;
       }
@@ -73,41 +79,85 @@
       --icon-bg : var(--red-light);
       --text-bg : var(--red-dark);
       transform: translate(20rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(2) {
       --icon-bg : var(--blue-light);
       --text-bg : var(--blue-dark);
       transform: translate(14.14rem, 14.14rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(3) {
       --icon-bg : var(--green-light);
       --text-bg : var(--green-dark);
       transform: translate(0rem,20rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(4) {
       --icon-bg : var(--yellow-light);
       --text-bg : var(--yellow-dark);
       transform: translate(-14.14rem, 14.14rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(5) {
       --icon-bg : var(--purple-light);
       --text-bg : var(--purple-dark);
       transform: translate(-20rem, 0rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(6) {
       --icon-bg : var(--pink-light);
       --text-bg : var(--pink-dark);
       transform: translate(-14.14rem,-14.14rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(7) {
       --icon-bg : var(--orange-light);
       --text-bg : var(--orange-dark);
       transform: translate(0rem,-20rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
     }
     &:nth-child(8) {
       --icon-bg : var(--brown-light);
       --text-bg : var(--brown-dark);
       transform: translate(14.14rem,-14.14rem) translate(-50%, -50%);
+      > * {
+        animation: rot1 40s linear infinite;
+      }
+
     }
+  }
+}
+
+@keyframes rot-ate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes rot1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform:rotate(-360deg);
   }
 }
