@@ -10,14 +10,11 @@
   position: relative;
   //
   .center-images {
-    position: relative;
+    position: absolute;
     width: 13rem;
     aspect-ratio: 1/1;
     border-radius: 2rem;
     overflow: hidden;
-    .man {
-      transform: scale(1.2) translateY(7%);
-    }
     img {
       position: absolute;
       top: 0;
@@ -34,13 +31,18 @@
 //
 .anim-circles {
   position: relative;
+  width: 13rem;
+  aspect-ratio: 1/1;
   .anim-circle {
+    --icon-bg : #fff;
+    --text-bg : #000;
+    background-color: var(--icon-bg);
     position: absolute;
-    opacity: 0;
-    background-color: var(--orange-light);
+    top: 50%;
+    left: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
     width: 8rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -54,12 +56,13 @@
     > p {
       opacity: 0;
       color: var(--white-light);
+      width: 100%;
       aspect-ratio: 1/1;
       font-weight: 500;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: var(--orange-dark);
+      background-color: var(--text-bg);
     }
     &:hover {
       > p {
@@ -67,8 +70,44 @@
       }
     }
     &:first-child {
-      opacity: 1;
-      transform: translateX(20rem);
+      --icon-bg : var(--red-light);
+      --text-bg : var(--red-dark);
+      transform: translate(20rem) translate(-50%, -50%);
+    }
+    &:nth-child(2) {
+      --icon-bg : var(--blue-light);
+      --text-bg : var(--blue-dark);
+      transform: translate(14.14rem, 14.14rem) translate(-50%, -50%);
+    }
+    &:nth-child(3) {
+      --icon-bg : var(--green-light);
+      --text-bg : var(--green-dark);
+      transform: translate(0rem,20rem) translate(-50%, -50%);
+    }
+    &:nth-child(4) {
+      --icon-bg : var(--yellow-light);
+      --text-bg : var(--yellow-dark);
+      transform: translate(-14.14rem, 14.14rem) translate(-50%, -50%);
+    }
+    &:nth-child(5) {
+      --icon-bg : var(--purple-light);
+      --text-bg : var(--purple-dark);
+      transform: translate(-20rem, 0rem) translate(-50%, -50%);
+    }
+    &:nth-child(6) {
+      --icon-bg : var(--pink-light);
+      --text-bg : var(--pink-dark);
+      transform: translate(-14.14rem,-14.14rem) translate(-50%, -50%);
+    }
+    &:nth-child(7) {
+      --icon-bg : var(--orange-light);
+      --text-bg : var(--orange-dark);
+      transform: translate(0rem,-20rem) translate(-50%, -50%);
+    }
+    &:nth-child(8) {
+      --icon-bg : var(--brown-light);
+      --text-bg : var(--brown-dark);
+      transform: translate(14.14rem,-14.14rem) translate(-50%, -50%);
     }
   }
 }
