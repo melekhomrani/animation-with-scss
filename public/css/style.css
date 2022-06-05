@@ -68,6 +68,13 @@ picture {
   --white-dark: #b3b3b3;
 }
 
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   justify-content: center;

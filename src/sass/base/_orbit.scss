@@ -1,3 +1,9 @@
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -5,10 +11,10 @@
   min-height: 100vh;
   max-width: 100vw;
   font-family: system-ui;
-  transform: scale(.7);
+  transform: scale(0.7);
   @media screen and (max-width: 768px) {
-    transform: scale(.5);
-  }   
+    transform: scale(0.5);
+  }
 }
 .orbit {
   position: relative;
@@ -43,15 +49,15 @@
     animation-play-state: paused;
   }
   .anim-circle {
-    --icon-bg : #fff;
-    --text-bg : #000;
+    --icon-bg: #fff;
+    --text-bg: #000;
     background-color: var(--icon-bg);
     position: absolute;
     top: 50%;
     left: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     width: 8rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -80,69 +86,68 @@
       }
     }
     &:first-child {
-      --icon-bg : var(--red-light);
-      --text-bg : var(--red-dark);
+      --icon-bg: var(--red-light);
+      --text-bg: var(--red-dark);
       transform: translate(20rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(2) {
-      --icon-bg : var(--blue-light);
-      --text-bg : var(--blue-dark);
+      --icon-bg: var(--blue-light);
+      --text-bg: var(--blue-dark);
       transform: translate(14.14rem, 14.14rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(3) {
-      --icon-bg : var(--green-light);
-      --text-bg : var(--green-dark);
-      transform: translate(0rem,20rem) translate(-50%, -50%);
+      --icon-bg: var(--green-light);
+      --text-bg: var(--green-dark);
+      transform: translate(0rem, 20rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(4) {
-      --icon-bg : var(--yellow-light);
-      --text-bg : var(--yellow-dark);
+      --icon-bg: var(--yellow-light);
+      --text-bg: var(--yellow-dark);
       transform: translate(-14.14rem, 14.14rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(5) {
-      --icon-bg : var(--purple-light);
-      --text-bg : var(--purple-dark);
+      --icon-bg: var(--purple-light);
+      --text-bg: var(--purple-dark);
       transform: translate(-20rem, 0rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(6) {
-      --icon-bg : var(--pink-light);
-      --text-bg : var(--pink-dark);
-      transform: translate(-14.14rem,-14.14rem) translate(-50%, -50%);
+      --icon-bg: var(--pink-light);
+      --text-bg: var(--pink-dark);
+      transform: translate(-14.14rem, -14.14rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(7) {
-      --icon-bg : var(--orange-light);
-      --text-bg : var(--orange-dark);
-      transform: translate(0rem,-20rem) translate(-50%, -50%);
+      --icon-bg: var(--orange-light);
+      --text-bg: var(--orange-dark);
+      transform: translate(0rem, -20rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
     }
     &:nth-child(8) {
-      --icon-bg : var(--brown-light);
-      --text-bg : var(--brown-dark);
-      transform: translate(14.14rem,-14.14rem) translate(-50%, -50%);
+      --icon-bg: var(--brown-light);
+      --text-bg: var(--brown-dark);
+      transform: translate(14.14rem, -14.14rem) translate(-50%, -50%);
       > * {
         animation: rot1 40s linear infinite;
       }
-
     }
   }
 }
@@ -154,7 +159,6 @@
   100% {
     transform: rotate(360deg);
   }
-
 }
 
 @keyframes rot1 {
@@ -162,6 +166,6 @@
     transform: rotate(0deg);
   }
   100% {
-    transform:rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
